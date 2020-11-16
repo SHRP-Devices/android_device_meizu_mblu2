@@ -43,16 +43,16 @@ TARGET_PREBUILT_KERNEL := device/lge/m253/prebuilt/Image.gz
 endif
 BOARD_MKBOOTIMG_ARGS := \
     --board $(TARGET_BOARD_PLATFORM) \
-    --kernel_offset 0x8000 \
+    --kernel_offset 0x00008000 \
     --pagesize 2048
 
 ifeq ($(m253_32_BUILD),true)
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_MKBOOTIMG_ARGS += \
     --base 0x40000000 \
-    --ramdisk_offset 0x4000000 \
-    --second_offset 0xF00000 \
-    --tags_offset 0xE000000
+    --ramdisk_offset 0x04000000 \
+    --second_offset 0x00f00000 \
+    --tags_offset 0x0e000000
 else
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_MKBOOTIMG_ARGS += \
@@ -63,7 +63,7 @@ BOARD_MKBOOTIMG_ARGS += \
 endif
 
 # Partitons
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 50331648
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 #Ignore Missing Dependencies
