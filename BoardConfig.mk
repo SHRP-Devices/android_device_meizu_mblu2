@@ -37,7 +37,7 @@ endif
 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 ifeq ($(m253_32_BUILD),true)
-TARGET_PREBUILT_KERNEL := device/lge/m253/prebuilt/zImage
+TARGET_PREBUILT_KERNEL := device/lge/m253/prebuilt/recovery.img-zImage
 else
 TARGET_PREBUILT_KERNEL := device/lge/m253/prebuilt/Image.gz
 endif
