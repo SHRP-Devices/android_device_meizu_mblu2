@@ -31,8 +31,8 @@ Contexts of Partition Manager is added in P.Managercontexts file please read i a
 
 **How to make x32 shrp?**
 
-Just go to AndroidProducts.mk and change "MBLU2_32_BUILD :=" to true
+Just go to AndroidProducts.mk and change "m253_32_BUILD :=" to true
 
-*Note to revert back on x64 just change "MBLU2_32_BUILD :=" to false*
+*Note to revert back on x64 just change "m253_32_BUILD :=" to false*
 
 ### [Guide For Other Devices](https://skyhawk-recovery-project.github.io/#/guide) to Build SHRP 
