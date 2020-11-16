@@ -1,8 +1,7 @@
-![SHRP](https://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni/raw/9.0/banner.png)
 
 ---------------
 
-**SHRP Device Source Code For Meizu M2**
+**SHRP Device Source Code For LG K430(m253)**
 
 **Build SHRP**
 
@@ -22,7 +21,7 @@ To initialize your local repository using the OMNIROM trees to build SHRP, use a
 
 *. build/envsetup.sh*
 
-*lunch omni_mblu2-eng*
+*lunch omni_m253-eng*
 
 *mka recoveryimage*
 
