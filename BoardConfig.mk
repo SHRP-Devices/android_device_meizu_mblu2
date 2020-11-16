@@ -1,7 +1,7 @@
-LOCAL_PATH := device/meizu/mblu2
+LOCAL_PATH := device/lge/m253
 
 # Architecture
-ifeq ($(MBLU2_32_BUILD),true)
+ifeq ($(m253_32_BUILD),true)
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := armeabi-v7a
@@ -24,29 +24,29 @@ endif
 TARGET_BOOTLOADER_BOARD_NAME := mt6735
 TARGET_BOARD_PLATFORM := mt6735
 TARGET_NO_BOOTLOADER := true
-ifneq ($(MBLU2_32_BUILD),true)
+ifneq ($(m253_32_BUILD),true)
 TARGET_IS_64_BIT := true
 endif
 
 # Kernel
-ifeq ($(MBLU2_32_BUILD),true)
+ifeq ($(m253_32_BUILD),true)
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,32N2
 else
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 endif
 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-ifeq ($(MBLU2_32_BUILD),true)
-TARGET_PREBUILT_KERNEL := device/meizu/mblu2/prebuilt/zImage
+ifeq ($(m253_32_BUILD),true)
+TARGET_PREBUILT_KERNEL := device/lge/m253/prebuilt/zImage
 else
-TARGET_PREBUILT_KERNEL := device/meizu/mblu2/prebuilt/Image.gz
+TARGET_PREBUILT_KERNEL := device/lge/m253/prebuilt/Image.gz
 endif
 BOARD_MKBOOTIMG_ARGS := \
     --board $(TARGET_BOARD_PLATFORM) \
     --kernel_offset 0x8000 \
     --pagesize 2048
 
-ifeq ($(MBLU2_32_BUILD),true)
+ifeq ($(m253_32_BUILD),true)
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_MKBOOTIMG_ARGS += \
     --base 0x40000000 \
@@ -81,8 +81,8 @@ TW_INCLUDE_CRYPTO := true
 TW_THEME := portrait_hdpi
 TW_USE_TOOLBOX := true
 # SHRP Configuration
-SHRP_MAINTAINER := Murtaza1326
-SHRP_DEVICE_CODE := mblu2
+SHRP_MAINTAINER := GuilianoS
+SHRP_DEVICE_CODE := m253
 SHRP_EDL_MODE := 0
 SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
@@ -96,9 +96,9 @@ SHRP_FONP_3 := /proc/torch
 SHRP_REC := /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/recovery
 SHRP_AB := false 
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section]
-SHRP_REC_TYPE := Treble
+SHRP_REC_TYPE := normal
 # Recovery Type (It can be A/B or A_only) [Only for About Section]
 SHRP_DEVICE_TYPE := A_Only
 SHRP_EXPRESS := true
-SHRP_OFFICIAL := true
+SHRP_OFFICIAL := false
 SHRP_DARK := true
