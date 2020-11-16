@@ -4,9 +4,9 @@ endif
 $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
-PRODUCT_MANUFACTURER := Meizu
-PRODUCT_RELEASE_NAME := mblu2
-PRODUCT_NAME := omni_mblu2
-PRODUCT_DEVICE := mblu2
-PRODUCT_MODEL := M2
-PRODUCT_BRAND := Meizu
+PRODUCT_MANUFACTURER := lge
+PRODUCT_RELEASE_NAME := m253
+PRODUCT_NAME := omni_m253
+PRODUCT_DEVICE := m253
+PRODUCT_MODEL := K-430
+PRODUCT_BRAND := LGE
